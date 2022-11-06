@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: random-echo
+  name: random-echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: random-echo
+  template:
+    metadata:
+      labels:
+        app: random-echo
+    spec:
+      containers:
+      - image: detoix/random-echo:v1
+        name: random-echo
+        ports:
+        - containerPort: 8080
