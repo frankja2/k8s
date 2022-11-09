@@ -5,7 +5,7 @@ metadata:
     app: random-echo
   name: random-echo
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: random-echo
