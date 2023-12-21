@@ -6,10 +6,6 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  tls:
-  - hosts:
-    - echo.weterynarz24h.ovh
-    secretName: tls-secret
   rules:
   - host: echo.weterynarz24h.ovh
     http:
