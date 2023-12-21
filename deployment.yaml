@@ -15,7 +15,7 @@ spec:
         app: random-echo
     spec:
       containers:
-      - image: detoix/random-echo:v1
+      - image: nginx
         name: random-echo
         ports:
-        - containerPort: 8080
+        - containerPort: 80
