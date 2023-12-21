@@ -2,10 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: some-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: public
+  tls:
+  - hosts:
+    - echo.weterynarz24h.ovh
+    secretName: tls-secret
   rules:
-  - host: test.com
+  - host: echo.weterynarz24h.ovh
     http:
       paths:
       - path: /
