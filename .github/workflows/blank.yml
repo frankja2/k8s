@@ -24,6 +24,9 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "${{ vars.DUPA }}"
+        run: echo "${{ vars.DUPA }}" > kutas
+
+      - name: cat
+        run: cat kutas
 
       
